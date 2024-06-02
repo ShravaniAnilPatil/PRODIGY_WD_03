@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #d930d6, #2575fc, #6397c1);
+    color: white;
+}
+
+h1.game-title {
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: #002587;
+}
+
+.players-info {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player input {
+    width: 250px;
+    padding: 10px;
+    font-size: 1.2em;
+    margin-top: 15px;
+    border: none;
+    border-radius: 15px;
+    border: 3px solid #0f1ea3;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    border-radius: 15px;
+    background-color: #f8f9fa;
+    color: #000;
+    border: 2px solid #002587;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: #d4e4fc;
+    transform: scale(1.05);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+}
+
+.winning-message {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5em;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.dancing-cartoon {
+    position: absolute;
+    right: 5%;
+    top: calc(50% + 3rem); /* 3rem below the winning message */
+    transform: translateY(-50%);
+    width: 150px;
+    height: auto;
+    display: none;
+}
+
+.turn-message {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .game-title {
+        font-size: 3em;
+    }
+
+    .players-info {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .player input {
+        width: 80%;
+        font-size: 1em;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-gap: 8px;
+        padding: 15px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+    }
+
+    .winning-message {
+        position: static;
+        font-size: 1.8em;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .dancing-cartoon {
+        position: static;
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .turn-message {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game-title {
+        font-size: 2.5em;
+    }
+
+    .player input {
+        width: 90%;
+        font-size: 0.9em;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 60px);
+        grid-gap: 6px;
+        padding: 10px;
+    }
+
+    .cell {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .winning-message {
+        font-size: 1.5em;
+        margin-top: 15px;
+    }
+
+    .dancing-cartoon {
+      
+        width: 100px;
+        margin-top: 5rem;
+        margin-bottom: 100px;
+    }
+
+    .turn-message {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

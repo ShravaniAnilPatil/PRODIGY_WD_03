@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="game-title">Tic-Tac-Toe</h1>
+    <div class="players-info">
+        <div class="player">
+            <label for="player1">Player 1 (X): </label>
+            <input type="text" id="player1" placeholder="Enter name">
+            <span id="score1">0</span>
+        </div>
+        <div class="player">
+            <label for="player2">Player 2 (O): </label>
+            <input type="text" id="player2" placeholder="Enter name">
+            <span id="score2">0</span>
+        </div>
+    </div>
+    <div class="container">
+        <div id="turnMessage" class="turn-message">Player 1's turn (X)</div>
+        <div id="board" class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <button id="restartBtn">Restart Game</button>
+    </div>
+
+    <div id="winningMessage" class="winning-message"></div>
+    <img id="dancingCartoon" class="dancing-cartoon" src="output-onlinegiftools.gif" alt="Dancing Cartoon">
+
+    <audio id="playerXSound" src="./sounds/274181__littlerobotsoundfactory__jingle_win_synth_06.wav"></audio>
+    <audio id="playerOSound" src="./sounds/320887__rhodesmas__win-04.wav"></audio>
+    <audio id="winningSound" src="  ./sounds/258142__tuudurt__level-win.wav"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
